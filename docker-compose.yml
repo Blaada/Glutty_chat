@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  video-chat-back:
+    image: video-chat-back:latest
+    ports:
+    - 3000:3000
+    depends_on:
+      - peerjs
+  peerjs:
+    image: peerjs
+    ports:
+    - 9000:9000
